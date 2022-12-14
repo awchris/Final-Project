@@ -1,0 +1,44 @@
+<head>
+    <title>Day Walking Form</title>
+    <style>
+        .inform{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+        h2{
+            font:Chakra Petch;
+            color: #FFFFCA;
+            text-shadow: 2px 2px #000000;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-size: 5em;
+            font-weight: bold;
+        }
+        body{
+            background-color: #D3CDCD;
+        }
+        .input{
+            background-color: rgba(156,165,245,0.19);
+            box-shadow: 2px 2px;
+            padding: 25px 25px 25px 25px;
+            font-size: 1.75em;
+        }
+    </style>
+</head>
+<body>
+    <div class="inform">
+        <h2 style="text-align: center;">Day Walk</h2>
+        <div class="input"><form action="reqresponse" method=get>
+        <label for="location1">Please enter your starting point</label>
+        <input type="text" id="location1" name="location1"/></br>
+        <label for="location2">Please enter your destination</label>
+        <input type="text" id="location2" name="location2"/></br>
+        <input type="submit" value="Submit" name="subbtn" id="submit"/>
+    </form>
+    {% if prompt %}
+    <p>{{prompt}}</p>
+    {% endif %}
+    </div></div>
+</body>

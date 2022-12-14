@@ -1,0 +1,60 @@
+<head>
+    <title>Day Walking Results</title>
+    <style>
+        h2{
+            font:Chakra Petch;
+            color: #FFFFCA;
+            text-shadow: 1px 1px #000000;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: black;
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-left: 2.5vw;
+        }
+        .info{
+            position: fixed;
+            top: 50vh;
+            left: 15vw;
+            transform: translate(0,-50%);
+            font-size: 2.25em;
+            font: Public Sans;
+            background-color: rgba(156,165,245,0.19);
+            box-shadow: 2px 2px;
+            padding: 25px 25px 25px 25px;
+        }
+        .map{
+            position: fixed;
+            top: 50vh;
+            right: 6vw;
+            transform: translate(0,-50%)
+        }
+        .title{
+            position: fixed;
+            right: 2.5vw;
+            left: 2.5vw;
+            top: 3vh;
+            font: Public Sans;
+            font-size: 2.3em;
+        }
+        .title:hover{
+            overflow: visible;
+            white-space: normal;
+            height: auto;
+        }
+        body{
+            background-color: #D3CDCD;
+        }
+    </style>
+</head>
+<body>
+    <h2>Day Walk</h2>
+    <div class="title"><h3>{{location1}} to {{location2}}</h3></div>
+    <div class="info">
+        <p>Departure Time: {{departure_time}}</p>
+        <p>Trip Time: {{trip_time}}</p>
+        <p>Trip Distance: {{trip_distance}}km</p>
+        <p>Sunset Time: {{sunset}}</p>
+        <button onclick="window.location.href='/';">New Locations</button>
+    </div>
+    <img class="map" src='{{map_url}}' width='500' height="500" alt="Map From {{location1}} to {{location2}}">
+</body>
